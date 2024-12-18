@@ -1,4 +1,8 @@
-const FinishScreen = ({ score, maxPossibleScore, highScore, dispatch }) => {
+import { useQuiz } from "../hooks/useQuiz";
+
+
+const FinishScreen = () => {
+  const { score, maxPossibleScore, highScore, dispatch } = useQuiz();
   const percentage = (score / maxPossibleScore) * 100;
 
   let emoji;
